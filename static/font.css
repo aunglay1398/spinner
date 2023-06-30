@@ -1,0 +1,35 @@
+*,
+*:before,
+*:after {
+  font-family: 'Stolzl', Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/static/fonts/Stolzl-Medium.eot?') format('eot'), url('/static/fonts/Stolzl-Medium.woff2') format('woff2'),
+    url('/static/fonts/Stolzl-Medium.woff') format('woff'), url('/static/fonts/Stolzl-Medium.ttf') format('truetype'),
+    url('/static/fonts/Stolzl-Medium.svg#Stolzl-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Stolzl';
+  src: url('/static/fonts/Stolzl-Regular.eot?') format('eot'), url('/static/fonts/Stolzl-Regular.woff2') format('woff2'),
+    url('/static/fonts/Stolzl-Regular.woff') format('woff'), url('/static/fonts/Stolzl-Regular.ttf') format('truetype'),
+    url('/static/fonts/Stolzl-Regular.svg#Stolzl') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Conthrax';
+  src: url('/static/fonts/Conthrax-sb.woff2') format('woff2'),
+    url('/static/fonts/ConthraxSb-Regular.woff') format('woff'),
+    url('/static/fonts/ConthraxSb-Regular.ttf') format('truetype'),
+    url('/static/fonts/ConthraxSb-Regular.svg#Conthrax') format('svg');
+  font-style: normal;
+  font-display: swap;
+}

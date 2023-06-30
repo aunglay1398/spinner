@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html translate="no">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171717" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="x-rim-auto-match" content="none" />
+
+    <!--Open Graph-->
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/static/o-graph-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="282" />
+
+    <link rel="preconnect" href="//www.googletagmanager.com" />
+    <link rel="preconnect" href="//cloudfront.net" />
+    <link rel="preconnect" href="//vars.hotjar.com" crossorigin="" />
+    <link rel="preconnect" href="//script.hotjar.com" crossorigin="" />
+    <link rel="preconnect" href="//static.hotjar.com" crossorigin="" />
+    <link rel="prefetch" href="/static/font.css" />
+
+    <link type="image/x-icon" rel="shortcut icon" href="/static/favicon.ico" />
+    <link type="image/png" sizes="16x16" rel="icon" href="/static/favicon-16x16.png" />
+    <link type="image/png" sizes="32x32" rel="icon" href="/static/favicon-32x32.png" />
+    <link type="image/png" sizes="96x96" rel="icon" href="/static/favicon-96x96.png" />
+    <link type="image/png" sizes="120x120" rel="icon" href="/static/apple-icon-120x120.png" />
+    <link type="image/png" sizes="192x192" rel="icon" href="/static/android-icon-192x192.png" />
+
+    <link sizes="57x57" rel="apple-touch-icon" href="/static/apple-icon-57x57.png" />
+    <link sizes="60x60" rel="apple-touch-icon" href="/static/apple-icon-60x60.png" />
+    <link sizes="72x72" rel="apple-touch-icon" href="/static/apple-icon-72x72.png" />
+    <link sizes="76x76" rel="apple-touch-icon" href="/static/apple-icon-76x76.png" />
+    <link sizes="114x114" rel="apple-touch-icon" href="/static/apple-icon-114x114.png" />
+    <link sizes="120x120" rel="apple-touch-icon" href="/static/apple-icon-120x120.png" />
+    <link sizes="144x144" rel="apple-touch-icon" href="/static/apple-icon-144x144.png" />
+    <link sizes="152x152" rel="apple-touch-icon" href="/static/apple-icon-152x152.png" />
+    <link sizes="180x180" rel="apple-touch-icon" href="/static/apple-icon-180x180.png" />
+
+    <link color="#EBBE7D" rel="mask-icon" href="/static/safari-pinned-tab.svg" />
+
+    <meta name="msapplication-TileColor" content="#171717" />
+    <meta name="msapplication-TileImage" content="/static/ms-icon-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/static/ms-icon-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/static/ms-icon-150x150.png" />
+    <meta name="msapplication-wide310x310logo" content="/static/ms-icon-310x310.png" />
+    <meta name="msapplication-wide310x150logo" content="/static/ms-icon-310x150.png" />
+    <meta name="msapplication-config" content="/static/browserconfig.xml" />
+
+    <link rel="manifest" href="/static/manifest.json" />
+    <link rel="stylesheet" href="/static/font.css" />
+
+    <!-- SSR_HEAD_TAGS -->
+    <!-- SSR_META_TAGS -->
+
+    <style>
+      body {
+        margin: 0;
+      }
+      .fairspin {
+        background-color: #15191f;
+      }
+      .fairspin .app-loading {
+        background-color: #15191f;
+      }
+      .weiss .app-loading {
+        background-color: white;
+      }
+      .app-loading {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      .fairspin .app-loading:before {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        left: calc(50% - 70px);
+        top: calc(50% - 50px);
+        width: 129px;
+        height: 33px;
+        background-image: url('https://d1rc9ikfnf4p5a.cloudfront.net/fairspin/brand/logo-v2-full.svg');
+      }
+      .weiss .app-loading:before {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: 100%;
+        max-width: 350px;
+        max-height: 350px;
+        transform: translate(-50%, -50%);
+        background: url('https://weiss-frankfurt-platform-s3-dev.s3.eu-central-1.amazonaws.com/weiss/base/loader.svg') no-repeat center / contain;
+      }
+      .fairspin .app-loading:after {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        left: calc(50% - 155px);
+        top: calc(50%);
+        width: 310px;
+        height: 24px;
+        background: url(https://d1rc9ikfnf4p5a.cloudfront.net/fairspin/base/preloader/chips.svg) 100% 100% no-repeat;
+      }
+      .app-loading div {
+        opacity: 0;
+      }
+      @keyframes loading-animation {
+        0% {
+          width: 0;
+          transform: translateX(0);
+        }
+        50% {
+          width: 250px;
+          transform: translateX(0);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+        100% {
+          clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+          transform: translateX(100%);
+        }
+      }
+    </style>
+    <script>
+      document.addEventListener('vue-ready', function () {
+        document.querySelector('#app').classList.remove('app-loading');
+      });
+    </script>
+
+    <script defer="defer" src="/js/chunk-vendors.bd370f8e.js?f6e4c274f08e09a7"></script><script defer="defer" src="/js/chunk-common.1829dbf2.js?f6e4c274f08e09a7"></script><script defer="defer" src="/js/index.494685e2.js?f6e4c274f08e09a7"></script><link href="/css/chunk-vendors.f6e4c274f08e09a7.css?f6e4c274f08e09a7" rel="stylesheet"/><link href="/css/chunk-common.f6e4c274f08e09a7.css?f6e4c274f08e09a7" rel="stylesheet"/>
+    <!-- SSR_STYLE_INJECT -->
+  </head>
+
+  <body class="platform %SSR_PLATFORM_ID% fairspin">
+    <div id="fasttrack-crm"></div>
+    <div id="app"></div>
+    <div id="ft-crm"></div>
+    <script>
+      const app = document.querySelector('#app');
+      if (!app.innerHTML) app.classList.add('app-loading');
+    </script>
+
+    <script>
+        // register service worker for Firebase Cloud Messaging web push
+        if (typeof window !== 'undefined' && typeof navigator !== 'undefined' && "serviceWorker" in navigator) {
+          navigator?.serviceWorker?.register("/firebase-messaging-sw.js").catch(function (error) {
+            console.error("Service worker registration failed:", error);
+          });
+        } else {
+          console.error("Service workers are not supported.");
+        }
+    </script>
+  </body>
+</html>

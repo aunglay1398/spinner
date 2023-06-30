@@ -1,0 +1,275 @@
+.platform {
+    --tourney-base-card-name-font: var(--title-font)
+}
+
+.tourney-base-card-name[data-v-2a43698a] {
+    margin: 0;
+    font: var(--tourney-base-card-name-font)
+}
+
+.platform {
+    --tourney-base-card-timer-title-font: var(--accent-font);
+    --tourney-base-card-timer-title-color: var(--primary-text);
+    --tourney-base-card-timer-control-font: var(--accent-font);
+    --tourney-base-card-timer-control-color: var(--primary-text)
+}
+
+.tourney-base-card-timer[data-v-319f3a6e] {
+    gap: 4px;
+    display: flex;
+    flex-direction: row
+}
+
+.tourney-base-card-timer__label[data-v-319f3a6e],.tourney-base-card-timer__title[data-v-319f3a6e] {
+    font: var(--tourney-base-card-timer-title-font);
+    color: var(--tourney-base-card-timer-title-color)
+}
+
+.tourney-base-card-timer__label[data-v-319f3a6e] {
+    padding: 0 0 0 4px
+}
+
+.tourney-base-card-timer[data-v-319f3a6e] .base-timer__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0
+}
+
+.tourney-base-card-timer[data-v-319f3a6e] .base-timer__separator.days {
+    visibility: hidden
+}
+
+.tourney-base-card-timer[data-v-319f3a6e] .base-timer__block {
+    text-align: center
+}
+
+.tourney-base-card-timer[data-v-319f3a6e] .base-timer__numbers,.tourney-base-card-timer[data-v-319f3a6e] .base-timer__separator {
+    font: var(--tourney-base-card-timer-control-font);
+    color: var(--tourney-base-card-timer-control-color)
+}
+
+.platform {
+    --tourney-base-card-short-font: var(--normal-font);
+    --tourney-base-card-short-font-accent: var(--medium-font);
+    --tourney-base-card-short-color: var(--secondary-text);
+    --tourney-base-card-short-color-accent: var(--primary-text);
+    --tourney-base-card-short-color-highlight: var(--highlight-text)
+}
+
+.tourney-base-card-short[data-v-60e831d6] {
+    font: var(--tourney-base-card-short-font);
+    color: var(--tourney-base-card-short-color)
+}
+
+.tourney-base-card-short[data-v-60e831d6] .accent,.tourney-base-card-short[data-v-60e831d6] .highlight {
+    font: var(--tourney-base-card-short-font-accent)
+}
+
+.tourney-base-card-short[data-v-60e831d6] .accent {
+    color: var(--tourney-base-card-short-color-accent)
+}
+
+.tourney-base-card-short[data-v-60e831d6] .highlight {
+    color: var(--tourney-base-card-short-color-highlight)
+}
+
+.platform {
+    --tourney-base-card-prize-hint-font: var(--small-font);
+    --tourney-base-card-prize-hint-color: var(--secondary-text);
+    --tourney-base-card-prize-icon-color: var(--highlight-text);
+    --tourney-base-card-prize-value-font: var(--highlight-font);
+    --tourney-base-card-prize-value-color: var(--primary-text)
+}
+
+.tourney-base-card-prize[data-v-92aefa1e] {
+    gap: 8px;
+    display: flex;
+    flex-direction: column
+}
+
+.tourney-base-card-prize__main[data-v-92aefa1e] {
+    gap: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
+.tourney-base-card-prize__hint[data-v-92aefa1e] {
+    white-space: nowrap;
+    text-transform: uppercase;
+    font: var(--tourney-base-card-prize-hint-font);
+    color: var(--tourney-base-card-prize-hint-color)
+}
+
+.tourney-base-card-prize__value[data-v-92aefa1e] {
+    white-space: nowrap;
+    font: var(--tourney-base-card-prize-value-font);
+    color: var(--tourney-base-card-prize-value-color);
+    display: flex;
+    flex-direction: row
+}
+
+.tourney-base-card-prize__icon[data-v-92aefa1e] path {
+    fill: var(--tourney-base-card-prize-icon-color)
+}
+
+.platform {
+    --tourney-base-card-provider-size: 24px
+}
+
+.tourney-base-card-provider[data-v-0cf67335] img {
+    height: var(--tourney-base-card-provider-size)
+}
+
+.platform {
+    --tourney-base-card-graphic-toolbar-color: var(--primary-background)
+}
+
+.tourney-base-card-graphic__bg[data-v-12b949e5] {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.tourney-base-card-graphic__title[data-v-12b949e5] {
+    min-height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.tourney-base-card-graphic__toolbar[data-v-12b949e5] {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 16px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1
+}
+
+.tourney-base-card-graphic__toolbar[data-v-12b949e5]:before {
+    content: "";
+    opacity: .28;
+    background: var(--tourney-base-card-graphic-toolbar-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1
+}
+
+.tourney-base-card-skeleton[data-v-0b714466] {
+    gap: 16px;
+    display: flex;
+    flex-direction: column
+}
+
+.tourney-base-card-skeleton__info[data-v-0b714466] {
+    min-height: 24px
+}
+
+.tourney-base-card-skeleton__prizes[data-v-0b714466] {
+    min-height: var(--tourney-base-card-data-min-height)
+}
+
+.platform {
+    --tourney-base-card-data-min-height: 90px;
+    --tourney-base-card-name-color: var(--primary-text);
+    --tourney-base-card-name-color-hover: var(--highlight-text);
+    --tourney-base-card-finished-font: var(--accent-font);
+    --tourney-base-card-finished-color: var(--primary-text)
+}
+
+.tourney-base-card[data-v-9577c476] {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative
+}
+
+.tourney-base-card .is-complete .colorize[data-v-9577c476] {
+    filter: grayscale(1)
+}
+
+@media(-ms-high-contrast:none),(hover: hover),screen and (-ms-high-contrast:active) {
+    .tourney-base-card .is-complete:hover .colorize[data-v-9577c476] {
+        filter:grayscale(.6)
+    }
+}
+
+.tourney-base-card.is-mini[data-v-9577c476] .tourney-base-card-graphic {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.tourney-base-card.is-mini .tourney-base-card__background[data-v-9577c476] path {
+    fill: #1c1c1c
+}
+
+.tourney-base-card__body[data-v-9577c476],.tourney-base-card__thumb[data-v-9577c476] {
+    position: relative
+}
+
+.tourney-base-card__body[data-v-9577c476] {
+    flex-grow: 1;
+    gap: 16px;
+    display: flex;
+    flex-direction: column
+}
+
+.tourney-base-card__info[data-v-9577c476] {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start
+}
+
+.tourney-base-card__name[data-v-9577c476] {
+    max-width: 100%;
+    color: var(--tourney-base-card-name-color)
+}
+
+@media(-ms-high-contrast:none),(hover: hover),screen and (-ms-high-contrast:active) {
+    .tourney-base-card__name.is-link[data-v-9577c476]:hover {
+        color:var(--tourney-base-card-name-color-hover)
+    }
+}
+
+.tourney-base-card__about[data-v-9577c476] {
+    padding-top: 8px
+}
+
+.tourney-base-card__prizes[data-v-9577c476] {
+    gap: 8px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+.tourney-base-card__prize[data-v-9577c476] {
+    flex: 1 1 0;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.tourney-base-card__finished[data-v-9577c476] {
+    font: var(--tourney-base-card-finished-font);
+    color: var(--tourney-base-card-finished-color)
+}
+
+.tourney-base-card__background[data-v-9577c476] {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0
+}

@@ -1,0 +1,19 @@
+#chat24 {
+    z-index: 1000000!important
+}
+
+#chat24 [class*=startBtn] {
+    margin: 0 auto;
+    width: 50px!important;
+    height: 50px!important
+}
+
+#chat24 [class*=module__closed] {
+    background: transparent!important
+}
+
+@media(max-width: 767px) {
+    #chat24.ingame {
+        display:none
+    }
+}
