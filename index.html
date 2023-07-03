@@ -53,12 +53,21 @@
 
     <!-- SSR_HEAD_TAGS -->
     <!-- SSR_META_TAGS -->
-    
+
     <style>
       body {
         margin: 0;
       }
+      .app-loading {
+        display: none;
+      }
     </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.app-loading').style.display = 'none';
+        document.querySelector('#app').style.display = 'block';
+      });
+    </script>
 
     <script defer="defer" src="/js/chunk-vendors.bd370f8e.js?f6e4c274f08e09a7"></script>
     <script defer="defer" src="/js/chunk-common.1829dbf2.js?f6e4c274f08e09a7"></script>
@@ -70,21 +79,17 @@
 
   <body class="platform %SSR_PLATFORM_ID% fairspin">
     <div id="fasttrack-crm"></div>
-    <div id="app"></div>
+    <div id="app" class="app-loading"></div>
     <div id="ft-crm"></div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('#app').style.display = 'block';
-      });
-    </script>
-
-    <script>
-      // register service worker for Firebase Cloud Messaging web push
+      // Register service worker for Firebase Cloud Messaging web push
       if (typeof window !== 'undefined' && typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/firebase-messaging-sw.js').catch(function (error) {
-          console.error('Service worker registration failed:', error);
-        });
+        navigator.serviceWorker
+          .register('/firebase-messaging-sw.js')
+          .catch(function (error) {
+            console.error('Service worker registration failed:', error);
+          });
       } else {
         console.error('Service workers are not supported.');
       }
