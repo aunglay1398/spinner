@@ -53,86 +53,18 @@
 
     <!-- SSR_HEAD_TAGS -->
     <!-- SSR_META_TAGS -->
-
+    
     <style>
       body {
         margin: 0;
       }
-      .fairspin {
-        background-color: #15191f;
-      }
-      .fairspin .app-loading {
-        background-color: #15191f;
-      }
-      .weiss .app-loading {
-        background-color: white;
-      }
-      .app-loading {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-      }
-      .fairspin .app-loading:before {
-        position: absolute;
-        z-index: 1;
-        content: '';
-        left: calc(50% - 70px);
-        top: calc(50% - 50px);
-        width: 129px;
-        height: 33px;
-        background-image: url('https://d1rc9ikfnf4p5a.cloudfront.net/fairspin/brand/logo-v2-full.svg');
-      }
-      .weiss .app-loading:before {
-        position: absolute;
-        z-index: 1;
-        content: '';
-        left: 50%;
-        top: 50%;
-        width: 100%;
-        height: 100%;
-        max-width: 350px;
-        max-height: 350px;
-        transform: translate(-50%, -50%);
-        background: url('https://weiss-frankfurt-platform-s3-dev.s3.eu-central-1.amazonaws.com/weiss/base/loader.svg') no-repeat center / contain;
-      }
-      .fairspin .app-loading:after {
-        position: absolute;
-        z-index: 1;
-        content: '';
-        left: calc(50% - 155px);
-        top: calc(50%);
-        width: 310px;
-        height: 24px;
-        background: url(https://d1rc9ikfnf4p5a.cloudfront.net/fairspin/base/preloader/chips.svg) 100% 100% no-repeat;
-      }
-      .app-loading div {
-        opacity: 0;
-      }
-      @keyframes loading-animation {
-        0% {
-          width: 0;
-          transform: translateX(0);
-        }
-        50% {
-          width: 250px;
-          transform: translateX(0);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        }
-        100% {
-          clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-          transform: translateX(100%);
-        }
-      }
     </style>
-    <script>
-      document.addEventListener('vue-ready', function () {
-        document.querySelector('#app').classList.remove('app-loading');
-      });
-    </script>
 
-    <script defer="defer" src="/js/chunk-vendors.bd370f8e.js?f6e4c274f08e09a7"></script><script defer="defer" src="/js/chunk-common.1829dbf2.js?f6e4c274f08e09a7"></script><script defer="defer" src="/js/index.494685e2.js?f6e4c274f08e09a7"></script><link href="/css/chunk-vendors.f6e4c274f08e09a7.css?f6e4c274f08e09a7" rel="stylesheet"/><link href="/css/chunk-common.f6e4c274f08e09a7.css?f6e4c274f08e09a7" rel="stylesheet"/>
+    <script defer="defer" src="/js/chunk-vendors.bd370f8e.js?f6e4c274f08e09a7"></script>
+    <script defer="defer" src="/js/chunk-common.1829dbf2.js?f6e4c274f08e09a7"></script>
+    <script defer="defer" src="/js/index.494685e2.js?f6e4c274f08e09a7"></script>
+    <link href="/css/chunk-vendors.f6e4c274f08e09a7.css?f6e4c274f08e09a7" rel="stylesheet" />
+    <link href="/css/chunk-common.f6e4c274f08e09a7.css?f6e4c274f08e09a7" rel="stylesheet" />
     <!-- SSR_STYLE_INJECT -->
   </head>
 
@@ -140,20 +72,22 @@
     <div id="fasttrack-crm"></div>
     <div id="app"></div>
     <div id="ft-crm"></div>
+
     <script>
-      const app = document.querySelector('#app');
-      if (!app.innerHTML) app.classList.add('app-loading');
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('#app').style.display = 'block';
+      });
     </script>
 
     <script>
-        // register service worker for Firebase Cloud Messaging web push
-        if (typeof window !== 'undefined' && typeof navigator !== 'undefined' && "serviceWorker" in navigator) {
-          navigator?.serviceWorker?.register("/firebase-messaging-sw.js").catch(function (error) {
-            console.error("Service worker registration failed:", error);
-          });
-        } else {
-          console.error("Service workers are not supported.");
-        }
+      // register service worker for Firebase Cloud Messaging web push
+      if (typeof window !== 'undefined' && typeof navigator !== 'undefined' && 'serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/firebase-messaging-sw.js').catch(function (error) {
+          console.error('Service worker registration failed:', error);
+        });
+      } else {
+        console.error('Service workers are not supported.');
+      }
     </script>
   </body>
 </html>
